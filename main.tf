@@ -24,7 +24,7 @@ resource "azurerm_linux_virtual_machine" "frontend" {
   name                  = "frontend"
   location              = "denmarkeast"
   resource_group_name   = "vm-ware-DenmarkEast"
-  network_interface_ids = [azurerm_network_interface.main.id]
+  network_interface_ids = [azurerm_network_interface.frontend.id]
   size               = "Standard_B1s"
 
   source_image_reference {
