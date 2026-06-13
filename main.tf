@@ -6,7 +6,7 @@ resource "azurerm_public_ip" "frontend" {
 }
 
 
-resource "azurerm_network_interface" "main" {
+resource "azurerm_network_interface" "frontend" {
   name                = "frontend-nic"
   location            = "denmarkeast"
   resource_group_name = "vm-ware-DenmarkEast"
@@ -20,7 +20,7 @@ resource "azurerm_network_interface" "main" {
 }
 
 
-resource "azurerm_linux_virtual_machine" "main" {
+resource "azurerm_linux_virtual_machine" "frontend" {
   name                  = "frontend"
   location              = "denmarkeast"
   resource_group_name   = "vm-ware-DenmarkEast"
